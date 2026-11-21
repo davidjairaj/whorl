@@ -1,0 +1,32 @@
+name: Phone test report
+description: Report what happened while trying Quick Access.
+title: "[Phone test] "
+body:
+  - type: markdown
+    attributes:
+      value: "This report is public. Do not include phone numbers, addresses, exported backups or other private information."
+  - type: input
+    id: version
+    attributes:
+      label: Quick Access version
+      value: "0.2.1"
+    validations:
+      required: true
+  - type: input
+    id: phone
+    attributes:
+      label: Phone model and Android version
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What happened?
+      description: Include the steps, what you expected, and what actually happened. For installation problems, include the exact message.
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: Would you keep using it?
+      description: What felt useful or awkward compared with your usual way? Mention accessibility, delays or unusual battery use if relevant.
