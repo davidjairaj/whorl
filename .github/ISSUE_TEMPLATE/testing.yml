@@ -1,5 +1,5 @@
 name: Phone test report
-description: Report what happened while trying Quick Access.
+description: Report what happened while trying Whorl.
 title: "[Phone test] "
 body:
   - type: markdown
@@ -8,8 +8,8 @@ body:
   - type: input
     id: version
     attributes:
-      label: Quick Access version
-      value: "0.2.1"
+      label: Whorl version
+      value: "0.4.0"
     validations:
       required: true
   - type: input
