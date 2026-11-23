@@ -4,26 +4,34 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Whorl for Android. Download the testing build.">
+  <meta name="description" content="Whorl for Android. Eight shortcuts around one animated button.">
   <meta name="theme-color" content="#17282d">
   <title>Whorl</title>
   <link rel="icon" href="./logo.png" type="image/png">
-  <link rel="stylesheet" href="./style.css?v=0.5.0">
+  <link rel="stylesheet" href="./style.css?v=0.5.0-store">
 </head>
 <body>
   <main class="page">
     <h1><img class="brand-icon" src="./logo.png" width="72" height="72" alt="">Whorl</h1>
+    <p class="intro">Eight shortcuts around one animated button.</p>
+    <div class="purchase">
+      <button class="button" type="button" disabled aria-describedby="store-status">Buy on Google Play</button>
+      <p class="metadata" id="store-status">Coming soon · Android 8.0+</p>
+    </div>
     <div class="gallery" aria-label="App screenshots">
       <figure><a href="./assets/home-moon.png" aria-label="View first app screenshot"><img src="./assets/home-moon.png" width="1080" height="2400" alt="Whorl with the Moon button and the Phone home control."></a></figure>
       <figure><a href="./assets/home-sunflower.png" aria-label="View second app screenshot"><img src="./assets/home-sunflower.png" width="1080" height="2400" alt="Whorl with the Sunflower button and the Phone home control."></a></figure>
       <figure><a href="./assets/home-vinyl.png" aria-label="View third app screenshot"><img src="./assets/home-vinyl.png" width="1080" height="2400" alt="Whorl with the Vinyl button and the Phone home control."></a></figure>
     </div>
-    <p class="update-note">New in 0.5.0: tap the house button to open your original Android home screen. Whorl stays your default Home app if you have chosen it.</p>
-    <div class="download">
-      <a class="button" href="https://github.com/davidjairaj/whorl/releases/download/v0.5.0/whorl-0.5.0.apk" download>Download APK</a>
-      <p class="metadata">Version 0.5.0 · Android 8.0+ · Testing build</p>
-      <p class="install-note">Install over your current Whorl app to keep your saved setup. No uninstall needed.</p>
-    </div>
+    <section class="notes" aria-labelledby="notes-title">
+      <h2 id="notes-title">Using Whorl</h2>
+      <dl>
+        <div><dt>Keep a familiar place for each shortcut</dt><dd>Tap the centre to open the ring, then choose a shortcut. You can also press, slide and release. Long-press a shortcut to change it.</dd></div>
+        <div><dt>Make it feel like your phone</dt><dd>Choose from twelve button designs and dark or grey backgrounds. Moon, Sunflower and Vinyl are shown above.</dd></div>
+        <div><dt>Return to your original home screen</dt><dd>Tap the house button below the ring. If you have made Whorl your default Home app, it stays your default.</dd></div>
+      </dl>
+      <p class="privacy-note">No ads, accounts or analytics. Your setup is stored on your phone; you choose whether and where to export a backup.</p>
+    </section>
   </main>
   <footer><span>© 2026 David Jairaj. All rights reserved.</span></footer>
 </body>

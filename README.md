@@ -1,10 +1,10 @@
 # Whorl for Android
 
-[Download Whorl](https://davidjairaj.github.io/whorl/)
+[Explore Whorl](https://davidjairaj.github.io/whorl/)
 
-Version 0.5.0 · Android 8.0+ · Testing build
+Eight shortcuts around one animated button. Twelve button designs and a house
+button that opens your original Android home screen.
 
-The house button opens your original Android home screen. Install the update
-over your existing Whorl app to keep your saved setup.
+Coming soon on Google Play · Android 8.0+
 
 © 2026 David Jairaj. All rights reserved.
