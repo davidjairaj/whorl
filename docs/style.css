@@ -9,7 +9,9 @@ figure{margin:0;aspect-ratio:3/4;overflow:hidden;border:1px solid var(--line);bo
 figure a{display:block;width:100%;height:100%}
 figure a:focus-visible{outline:3px solid #f0c599;outline-offset:-4px}
 figure img{display:block;width:100%;height:100%;object-fit:cover;object-position:bottom}
-.download{margin-top:30px}
+.update-note{max-width:42rem;margin:26px auto 0;font-size:1rem;line-height:1.6}
+.install-note{max-width:32rem;margin:12px auto 0;font-size:.875rem;color:var(--muted)}
+.download{margin-top:24px}
 .button{appearance:none;display:inline-flex;align-items:center;justify-content:center;min-width:194px;min-height:52px;padding:13px 27px;border:1px solid var(--accent);border-radius:4px;background:var(--accent);color:#172f36;font:600 1rem/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-decoration:none;cursor:pointer}
 .button:hover{background:#c2e6e4;border-color:#c2e6e4}
 .button:focus-visible{outline:3px solid #f0c599;outline-offset:5px}
