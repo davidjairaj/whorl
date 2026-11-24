@@ -1,13 +1,12 @@
 (() => {
   'use strict';
   const slides = [
-    { image: './assets/tutorial/closed-vinyl.png', title: 'Start with one button.', description: 'Tap the button to open your shortcuts. Tap again to tuck them away.', alt: 'Whorl with a Vinyl button, closed shortcut ring and grey background.', caption: 'Vinyl · Grey background' },
-    { image: './assets/tutorial/open-moon.png', title: 'Choose each shortcut.', description: 'Long-press a shortcut. Choose its action and what it opens, then tap Save.', alt: 'The open Moon ring, with the Camera shortcut highlighted as an example to long-press.', callout: 'shortcut', caption: 'Moon · Dark background' },
-    { image: './assets/tutorial/button-picker.png', title: 'Find your favourite.', description: 'Tap the palette below the ring, then choose one of twelve designs. Your shortcuts stay in place.', alt: 'Whorl’s native design picker showing all twelve button designs.', caption: 'Twelve designs' },
-    { image: './assets/tutorial/open-vinyl.png', title: 'Home is still home.', description: 'Tap the house below the ring to return to your original Home screen.', alt: 'Whorl with a Vinyl button and the original Home screen control highlighted below the ring.', callout: 'home', caption: 'Vinyl · Dark background' }
+    { image: './assets/tutorial/open-moon.png', title: 'Your shortcuts, together.', description: 'Tap the centre button to open or close your shortcuts.', alt: 'Whorl’s Moon button with eight shortcuts arranged around it.' },
+    { image: './assets/tutorial/open-moon.png', title: 'Choose each shortcut.', description: 'Long-press a shortcut. Choose its action and what it opens, then tap Save.', alt: 'The open Moon ring, with the Camera shortcut highlighted as an example to long-press.', callout: 'shortcut' },
+    { image: './assets/tutorial/button-picker.png', title: 'Find your favourite.', description: 'Tap the palette below the ring. Choose from twelve button designs.', alt: 'Whorl’s native design picker showing all twelve button designs.' },
+    { image: './assets/tutorial/open-vinyl.png', title: 'Home is still home.', description: 'Tap the house below the ring to return to your original Home screen.', alt: 'Whorl with a Vinyl button and the original Home screen control highlighted below the ring.', callout: 'home' }
   ];
   let currentSlide = 0;
-  const slideButtons = [...document.querySelectorAll('[data-slide]')];
   const slideImage = document.getElementById('slide-image');
   const previous = document.getElementById('previous-slide');
   const next = document.getElementById('next-slide');
@@ -16,23 +15,17 @@
     const slide = slides[currentSlide];
     slideImage.src = slide.image;
     slideImage.alt = slide.alt;
-    document.getElementById('slide-caption').textContent = slide.caption;
     const callout = document.getElementById('screen-callout');
     callout.hidden = !slide.callout;
     callout.dataset.target = slide.callout || '';
     document.getElementById('slide-title').textContent = slide.title;
     document.getElementById('slide-description').textContent = slide.description;
-    document.getElementById('slide-position').textContent = `${String(currentSlide + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
-    slideButtons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === currentSlide)));
+    document.getElementById('slide-position').textContent = `${currentSlide + 1} / ${slides.length}`;
   }
   previous.disabled = false;
   next.disabled = false;
   previous.addEventListener('click', () => showSlide(currentSlide - 1));
   next.addEventListener('click', () => showSlide(currentSlide + 1));
-  slideButtons.forEach(button => {
-    button.disabled = false;
-    button.addEventListener('click', () => showSlide(Number(button.dataset.slide)));
-  });
 
   const fields = document.getElementById('signup-fields');
   const submit = document.getElementById('signup-submit');
@@ -58,6 +51,7 @@
   function setMessage(text, kind = '') {
     message.textContent = text;
     message.dataset.kind = kind;
+    message.classList.toggle('sr-only', !kind && !submitting && !verifiedRequestSent);
   }
   function syncForm() {
     fields.disabled = !isOpen || submitting || verifiedRequestSent;
