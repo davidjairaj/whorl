@@ -3,36 +3,104 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Whorl for Android. Eight shortcuts around one animated button.">
-  <meta name="theme-color" content="#17282d">
-  <title>Whorl</title>
+  <meta name="description" content="Whorl for Android. Eight shortcuts around one animated button. Join the first twenty testers for a free copy to keep.">
+  <meta name="theme-color" content="#f8f9f7">
+  <title>Whorl — A familiar place for everyday things</title>
   <link rel="icon" href="./logo.png" type="image/png">
-  <link rel="stylesheet" href="./style.css?v=0.5.0-store">
+  <link rel="stylesheet" href="./style.css?v=1">
+  <script src="./app.js?v=1" defer></script>
 </head>
-<body>
-  <main class="page">
-    <h1><img class="brand-icon" src="./logo.png" width="72" height="72" alt="">Whorl</h1>
-    <p class="intro">Eight shortcuts around one animated button.</p>
-    <div class="purchase">
-      <button class="button" type="button" disabled aria-describedby="store-status">Buy on Google Play</button>
-      <p class="metadata" id="store-status">Coming soon · Android 8.0+</p>
-    </div>
-    <div class="gallery" aria-label="App screenshots">
-      <figure><a href="./assets/home-moon.png" aria-label="View first app screenshot"><img src="./assets/home-moon.png" width="1080" height="2400" alt="Whorl with the Moon button and the Phone home control."></a></figure>
-      <figure><a href="./assets/home-sunflower.png" aria-label="View second app screenshot"><img src="./assets/home-sunflower.png" width="1080" height="2400" alt="Whorl with the Sunflower button and the Phone home control."></a></figure>
-      <figure><a href="./assets/home-vinyl.png" aria-label="View third app screenshot"><img src="./assets/home-vinyl.png" width="1080" height="2400" alt="Whorl with the Vinyl button and the Phone home control."></a></figure>
-    </div>
-    <section class="notes" aria-labelledby="notes-title">
-      <h2 id="notes-title">Using Whorl</h2>
-      <dl>
-        <div><dt>Keep a familiar place for each shortcut</dt><dd>Tap the centre to open the ring, then choose a shortcut. You can also press, slide and release. Long-press a shortcut to change it.</dd></div>
-        <div><dt>Make it feel like your phone</dt><dd>Choose from twelve button designs and dark or grey backgrounds. Moon, Sunflower and Vinyl are shown above.</dd></div>
-        <div><dt>Return to your original home screen</dt><dd>Tap the house button below the ring. If you have made Whorl your default Home app, it stays your default.</dd></div>
-      </dl>
-      <p class="privacy-note">No ads, accounts or analytics. Your setup is stored on your phone; you choose whether and where to export a backup.</p>
-    </section>
-  </main>
-  <footer><span>© 2026 David Jairaj. All rights reserved.</span></footer>
+<body class="robotics">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page"><div class="shell">
+    <header class="page-header">
+      <a class="brand" href="./" aria-label="Whorl home"><img src="./logo.png" alt="" width="48" height="48"><span>Whorl</span></a>
+      <nav aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#join">Join the test</a></nav>
+    </header>
+    <main id="main">
+      <section class="section split hero" aria-labelledby="hero-title">
+        <div class="copy hero-copy">
+          <h1 id="hero-title">Eight shortcuts.<br>One familiar place.</h1>
+          <p class="intro">Your everyday apps and people, gathered around a button you make your own.</p>
+          <a class="text-link" href="#how-it-works">Take a look</a>
+          <p class="small hero-note">Android 8.0 and later · No ads or subscriptions</p>
+        </div>
+        <div class="media hero-media">
+          <div class="media-label"><span>Whorl / Moon</span></div>
+          <img class="hero-screen" src="./assets/home-moon.png" alt="Whorl’s Moon button, eight shortcut positions and the house button below the ring." width="1080" height="2400" fetchpriority="high">
+        </div>
+      </section>
+      <section class="section facts" aria-label="Whorl at a glance">
+        <p><span class="fact-number">8</span><span>Familiar shortcut positions</span></p>
+        <p><span class="fact-number">12</span><span>Animated button designs</span></p>
+        <p><span class="fact-symbol" aria-hidden="true">⌂</span><span>Your original Home, one tap away</span></p>
+      </section>
+      <section class="section split walkthrough" id="how-it-works" aria-labelledby="walkthrough-title">
+        <div class="copy walkthrough-copy">
+          <p class="eyebrow">A quick look around</p>
+          <h2 id="walkthrough-title">Make it yours.</h2>
+          <div class="slide-copy" aria-live="polite" aria-atomic="true">
+            <p class="step-label" id="slide-position">01 / 04</p>
+            <h3 id="slide-title">Start with one button.</h3>
+            <p id="slide-description">Tap the button to open your shortcuts. Tap again to tuck them away.</p>
+          </div>
+          <div class="slide-controls" aria-label="Slideshow controls">
+            <button type="button" id="previous-slide" aria-label="Previous slide" disabled>Previous</button>
+            <button type="button" id="next-slide" aria-label="Next slide" disabled>Next</button>
+          </div>
+          <div class="slide-tabs" aria-label="Choose a slide">
+            <button type="button" data-slide="0" aria-pressed="true" disabled>Button</button>
+            <button type="button" data-slide="1" aria-pressed="false" disabled>Configure</button>
+            <button type="button" data-slide="2" aria-pressed="false" disabled>Designs</button>
+            <button type="button" data-slide="3" aria-pressed="false" disabled>Home</button>
+          </div>
+          <noscript><p class="small">The first screenshot is shown. Enable JavaScript to browse the walkthrough and check testing availability.</p></noscript>
+        </div>
+        <figure class="media walkthrough-media" aria-labelledby="slide-title">
+          <div class="screen-wrap"><img id="slide-image" src="./assets/tutorial/closed-vinyl.png" alt="Whorl with a Vinyl button, closed shortcut ring and grey background." width="1080" height="2400" loading="lazy"><span id="screen-callout" class="screen-callout" hidden aria-hidden="true"></span></div>
+          <figcaption id="slide-caption">Vinyl · Grey background</figcaption>
+        </figure>
+      </section>
+      <section class="section split signup" id="join" aria-labelledby="signup-title">
+        <div class="copy signup-copy">
+          <p class="eyebrow">The first twenty</p>
+          <h2 id="signup-title">Free to keep.</h2>
+          <p class="signup-intro">First 20 verified testers.</p>
+          <p>Help shape Whorl. Use it for 14 days and tell us what works, and what needs attention.</p>
+          <div class="availability" role="status" aria-live="polite" aria-atomic="true">
+            <strong id="remaining-count">—</strong>
+            <div><span id="availability-label">Checking availability</span><p id="availability-note">A place is confirmed after you verify your email.</p></div>
+          </div>
+          <p class="small">One free Google Play code per tester. Yours to keep after the test.</p>
+        </div>
+        <div class="signup-form-cell">
+          <form id="signup-form">
+            <fieldset id="signup-fields" disabled>
+              <legend>Join the closed test</legend>
+              <label for="signup-email">Your Google Play account email</label>
+              <input id="signup-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required aria-describedby="email-help">
+              <p id="email-help" class="field-help">Use the account you use in the Play Store.</p>
+              <p class="eligibility">India · Android 8+ · 18+</p>
+              <label class="check-label" for="signup-adult"><input id="signup-adult" name="adult" type="checkbox" required><span>I’m 18 or older, have an India Google Play account and can test for 14 days.</span></label>
+              <div class="quiet-field" aria-hidden="true"><label for="signup-website">Leave this field empty</label><input id="signup-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+              <button class="button" id="signup-submit" type="submit" disabled>Send verification email</button>
+            </fieldset>
+            <p class="form-message" id="signup-message" role="status" aria-live="polite">Registration is not open yet. Please check back.</p>
+            <p class="small privacy-note">We use your details to arrange the test and send your access instructions. <a href="./testing-privacy.html">Testing privacy</a></p>
+          </form>
+        </div>
+      </section>
+      <section class="section next-steps" aria-label="How to join the test">
+        <div><h3>Verify your email.</h3></div>
+        <div><h3>Join the Google Play test.</h3></div>
+        <div><h3>Test for 14 days.</h3></div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <a class="footer-brand" href="./">Whorl</a>
+      <p>© 2026 David Jairaj</p>
+      <div class="legal-links"><a href="./privacy.html">App privacy</a><a href="mailto:david.jairaj@gmail.com">Get in touch</a></div>
+    </footer>
+  </div></div>
 </body>
 </html>
