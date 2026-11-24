@@ -2,9 +2,9 @@
   'use strict';
   const slides = [
     { image: './assets/tutorial/open-moon.png', title: 'Your shortcuts, together.', description: 'Tap the centre button to open or close your shortcuts.', alt: 'Whorl’s Moon button with eight shortcuts arranged around it.' },
-    { image: './assets/tutorial/open-moon.png', title: 'Choose each shortcut.', description: 'Long-press a shortcut. Choose its action and what it opens, then tap Save.', alt: 'The open Moon ring, with the Camera shortcut highlighted as an example to long-press.', callout: 'shortcut' },
-    { image: './assets/tutorial/button-picker.png', title: 'Find your favourite.', description: 'Tap the palette below the ring. Choose from twelve button designs.', alt: 'Whorl’s native design picker showing all twelve button designs.' },
-    { image: './assets/tutorial/open-vinyl.png', title: 'Home is still home.', description: 'Tap the house below the ring to return to your original Home screen.', alt: 'Whorl with a Vinyl button and the original Home screen control highlighted below the ring.', callout: 'home' }
+    { image: './assets/tutorial/open-moon.png', title: 'Choose each shortcut.', description: 'Hold a shortcut. Choose what it opens, then tap Save.', alt: 'The open Moon ring, with the Camera shortcut highlighted as an example to long-press.', callout: 'shortcut' },
+    { image: './assets/tutorial/button-picker.png', title: 'Find your favourite.', description: 'Tap the palette to choose from twelve designs.', alt: 'Whorl’s native design picker showing all twelve button designs.' },
+    { image: './assets/tutorial/open-vinyl.png', title: 'Home is still home.', description: 'Tap the house to return to your original Home screen.', alt: 'Whorl with a Vinyl button and the original Home screen control highlighted below the ring.', callout: 'home' }
   ];
   let currentSlide = 0;
   const slideImage = document.getElementById('slide-image');
